@@ -1,0 +1,177 @@
+/* Reset de margens e preenchimentos */
+•⁠  ⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9d5d1;
+    color: #000000;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffebf0; /* Fundo suave */
+
+}
+
+.heart {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Gideon Roman", sans-serif;
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: "Gideon Roman", sans-serif;
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+p {
+    font-family: "Gideon Roman", sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Estilo para cada linha de texto + imagem */
+.linha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Estilo para o texto */
+.texto {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.texto p {
+    font-family: "Gideon Roman", sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Estilo para as imagens */
+.imagem {
+    flex: 1;
+    padding: 20px;
+}
+
+.imagem img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 1.0);
+}
+.imagem2 img {
+    width: 250px;
+    height: 300px;
+}
+.imagem3 img {
+    width: 350px;
+    height: 100px;
+}
+
+/* Quando a classe "invertida" é aplicada, a ordem dos elementos muda */
+.linha.invertida {
+    flex-direction: row-reverse;
+}
+
+.linha.invertida .imagem {
+    text-align: right;
+}
+
+.linha.invertida .texto {
+    text-align: right;
+}
+
+/* Estilo para o link */
+a {
+    font-family: "Gideon Roman", sans-serif;
+    color: #3d3f3f; /* Cor azul */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    padding: 10px 20px; /* Adiciona um pouco de espaço ao redor do link */
+    border-radius: 5px; /* Borda arredondada */
+    transition: all 0.3s ease; /* Efeito suave na transição */
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    font-family: "Gideon Roman", sans-serif;
+    background-color: #0f1010; /* Cor de fundo azul escura quando passar o mouse */
+    color: white; /* Cor do texto branca quando passar o mouse */
+    text-decoration: none; /* Garante que o sublinhado não apareça no hover */
+}
+
+/* Estilo para a linha <hr> */
+hr {
+    border: 0; /* Remove a borda padrão */
+    border-top: 1px solid #000000; /* Linha fina e vermelha */
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+    width: 100%; /* Controla a largura da linha */
+    margin-left: auto; /* Alinha a linha ao centro */
+    margin-right: auto; /* Alinha a linha ao centro */
+}
+
+/* Estilização do botão */
+#playPauseBtn {
+    background-color: #000000; /* Cor de fundo (verde) */
+    color: white; /* Cor do texto */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+}
+
+/* Efeito de hover (quando o mouse passa sobre o botão) */
+#playPauseBtn:hover {
+    background-color: #515151; /* Cor um pouco mais escura */
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+}
+
+/* Efeito de clique (quando pressionado) */
+#playPauseBtn:active {
+    background-color: #388e3c; /* Cor mais escura ao clicar */
+    transform: scale(1); /* Volta ao tamanho normal */
+}
+
